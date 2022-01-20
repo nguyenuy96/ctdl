@@ -1,0 +1,1 @@
+id,name,type,made_in,in_unit_price,out_unit_price,date_in,in_amount,date_out,out_amount,total_in_amount,total_out_amount,total_amount
