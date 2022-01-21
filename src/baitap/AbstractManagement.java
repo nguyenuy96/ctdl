@@ -18,7 +18,7 @@ public abstract class AbstractManagement<T extends ModelInterface> {
         ) {
             t.setId(UUID.randomUUID().toString());
             String updatedObject = generateObjectAsString(t);
-            bufferedWriter.write("\n" + updatedObject);
+            bufferedWriter.write(updatedObject + "\n");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -94,7 +94,7 @@ public abstract class AbstractManagement<T extends ModelInterface> {
             reader.readLine();
             String str;
 
-            while ((str = reader.readLine()) != null) {
+            while ((str = reader.readLine()) != null && !"".equals(str)) {
                 String[] strings = str.split(",");
                 list.add(getObjectFromFile(strings));
             }
@@ -104,6 +104,17 @@ public abstract class AbstractManagement<T extends ModelInterface> {
         return list;
     }
 
+    public T inputForAddNew() {
+        T t = input();
+        t.setId(UUID.randomUUID().toString());
+        return t;
+    }
+
+    public T inputForUpdate() {
+        return input();
+    }
+
+    protected abstract T input();
     public abstract String getFileName();
     public abstract String getTempFileName();
     public abstract T getObjectFromFile(String[] strings);

@@ -1,6 +1,13 @@
 package baitap;
 
+import java.util.List;
+
 public class CosmeticManagement extends AbstractManagement<Cosmetic> {
+
+    @Override
+    protected Cosmetic input() {
+        return null;
+    }
 
     @Override
     public String getFileName() {
@@ -36,7 +43,13 @@ public class CosmeticManagement extends AbstractManagement<Cosmetic> {
         return null;
     }
 
-    private void console() {
+    private void console(List<Cosmetic> cosmetics) {
+        System.out.println(
+                "Cosmetic list"
+        );
+        System.out.println(
+              "%36s | %50s | %15s | %12s | %12s | %12s | %8s | "
+        );
 
     }
 }

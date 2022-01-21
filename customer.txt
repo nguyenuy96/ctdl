@@ -1,0 +1,3 @@
+id,full_name,phone_number,address
+d31185c3-aade-4a67-b72f-5752db970958,Uy1,123456789,Uy1
+a8be9b76-46fd-426b-9a61-f4c6baa15bee,adsf,adf,adf

@@ -1,7 +1,5 @@
 package baitap;
 
-import java.util.Date;
-
 public class Cosmetic implements ModelInterface {
     private String id;
     private String cosmeticName;

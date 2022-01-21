@@ -2,6 +2,11 @@ package baitap;
 
 public class EmployeeManagement extends AbstractManagement<Employee> {
     @Override
+    protected Employee input() {
+        return null;
+    }
+
+    @Override
     public String getFileName() {
         return null;
     }

@@ -8,6 +8,11 @@ public class BillManagement extends AbstractManagement<Bill> {
     }
 
     @Override
+    protected Bill input() {
+        return null;
+    }
+
+    @Override
     public String getFileName() {
         return null;
     }
